@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gpf-dC-V6Q">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SoraQuickStart" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="yEk-wo-i1h" customClass="VideoView" customModule="Sora">
+                                <rect key="frame" x="0.0" y="88" width="375" height="517"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7L-ZK-wCL">
+                                <rect key="frame" x="247" y="413" width="120" height="180"/>
+                                <subviews>
+                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="2h7-KS-GO5" customClass="VideoView" customModule="Sora">
+                                        <rect key="frame" x="4" y="4" width="112" height="172"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="2h7-KS-GO5" firstAttribute="leading" secondItem="h7L-ZK-wCL" secondAttribute="leading" constant="4" id="iSw-CV-Bl4"/>
+                                    <constraint firstAttribute="width" constant="120" id="jsI-SG-S02"/>
+                                    <constraint firstItem="2h7-KS-GO5" firstAttribute="top" secondItem="h7L-ZK-wCL" secondAttribute="top" constant="4" id="met-Ed-OeB"/>
+                                    <constraint firstAttribute="height" constant="180" id="nVO-WC-6BB"/>
+                                    <constraint firstAttribute="trailing" secondItem="2h7-KS-GO5" secondAttribute="trailing" constant="4" id="pR2-4G-TC2"/>
+                                    <constraint firstAttribute="bottom" secondItem="2h7-KS-GO5" secondAttribute="bottom" constant="4" id="yWf-Y8-Pgc"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QFe-mz-Beo" userLabel="Separator">
+                                <rect key="frame" x="0.0" y="605" width="375" height="8"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="oAR-XO-ReH"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Pnc-ij-UF5">
+                                <rect key="frame" x="137.66666666666666" y="622" width="100" height="98.666666666666629"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="23j-Ex-YhN"/>
+                                    <constraint firstAttribute="width" constant="100" id="Obj-3f-Ejm"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ZgX-8n-0vR" appends="YES" id="gbG-7K-ts8"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yEk-wo-i1h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1cM-QB-vlJ"/>
+                            <constraint firstAttribute="trailing" secondItem="QFe-mz-Beo" secondAttribute="trailing" id="82U-gL-lsn"/>
+                            <constraint firstItem="QFe-mz-Beo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C9I-7Q-6eJ"/>
+                            <constraint firstItem="QFe-mz-Beo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GXg-Jj-1Zs"/>
+                            <constraint firstItem="Pnc-ij-UF5" firstAttribute="top" secondItem="QFe-mz-Beo" secondAttribute="bottom" constant="8" id="H3D-Xt-EEN"/>
+                            <constraint firstItem="QFe-mz-Beo" firstAttribute="top" secondItem="h7L-ZK-wCL" secondAttribute="bottom" constant="12" id="Juq-Xc-BZJ"/>
+                            <constraint firstItem="h7L-ZK-wCL" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="8" id="TV9-Dp-QO2"/>
+                            <constraint firstAttribute="trailing" secondItem="yEk-wo-i1h" secondAttribute="trailing" id="XRJ-uo-KyE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Pnc-ij-UF5" secondAttribute="bottom" constant="8" id="fZl-6X-bre"/>
+                            <constraint firstItem="QFe-mz-Beo" firstAttribute="top" secondItem="yEk-wo-i1h" secondAttribute="bottom" id="kQZ-V2-7aE"/>
+                            <constraint firstItem="yEk-wo-i1h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vW6-u4-Psy"/>
+                            <constraint firstItem="Pnc-ij-UF5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zJz-YP-vVs"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="bt3-Hg-Umw"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="connectImageView" destination="Pnc-ij-UF5" id="wwy-dX-JPE"/>
+                        <outlet property="receiverVideoView" destination="yEk-wo-i1h" id="aaS-gm-GWc"/>
+                        <outlet property="senderVideoView" destination="2h7-KS-GO5" id="ZkD-WB-F3K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ZgX-8n-0vR">
+                    <connections>
+                        <action selector="connect:" destination="BYZ-38-t0r" id="zDo-B4-amG"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-716" y="-532.01970443349751"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fzg-SV-5lH">
+            <objects>
+                <navigationController id="gpf-dC-V6Q" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LEk-IA-cUQ">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="pck-5H-kws"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LJ3-Xf-fG9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1406" y="-532"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
